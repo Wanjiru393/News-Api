@@ -17,3 +17,52 @@ def index():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('error.html'),404
+
+
+@app.route('/sources')
+def sources_page():
+
+    sources = get_sources()
+
+    return render_template('sources.html', sources=sources)
+
+
+@app.route('/everything')
+def everything():
+
+    return render_template('everything.html')
+
+
+@app.route('/business')
+def business():
+
+    Business = get_everything('business')
+    return render_template('business.html', Business=Business)
+
+
+@app.route('/technology')
+def technology():
+
+    technologies = get_everything('technology')
+    return render_template('technology.html', technologies=technologies)
+
+
+@app.route('/entertainment')
+def entertainment():
+
+    entertainments = get_everything('entertainment')
+    return render_template('entertainment.html', entertainments=entertainments)
+
+
+@app.route('/sports')
+def sports():
+
+    sports = get_everything('sports')
+    return render_template('sports.html', sports=sports)
+
+
+@app.route('/science')
+def science():
+
+    sciences = get_everything('science')
+    return render_template('science.html', sciences=sciences)
