@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>World-Daily.com <span> sources</span> </h2>
+
+
+{%for source in sources%}
+<div class="container-fluid" id="sources">
+
+
+     <ul class="">
+          <li class="card card1 mt-3 mb-3" id="sources">
+               <div class="card-body " id="cardis">
+                    <h6 class="card-title">{{source.name}}</h6>
+                    <hr>
+                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                    <p class="card-text" style="height: 7rem;overflow: hidden;">{{source.description}}.</p>
+                    <a href="{{source.url}}" class="card-link">Visit Website</a>
+                   
+               </div>
+          </li>
+     </ul>
+
+</div>
+{%endfor%}
+
+{% endblock %}
