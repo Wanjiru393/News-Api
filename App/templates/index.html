@@ -1,14 +1,41 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h3>Welcome To World-Daily</h3>
+<div class="container">
+    <div class="container mt-5"></div>
+        <h1 class="text-center mt-4 mb-3">Top Headlines</h1><hr>
+</div>
+
 
 
     {% for articles in articles %}
+    <div class="container">
+        <div class="row col-md-10">
+            <div class="card-deck">
+                <div class="card mb-5">
+                    <img src="{{ articles.urlToImage}}" class ="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-titlr">{{articles.title}}</h3>
+                        <p class="card-text">{{ articles.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{articles.url}}">
+                            <h3>Read more</h3>
+                        </a>
+                        <p>{{articles.author}}</p>
+                        <small class="text-muted">Last updated {{articles.publishedAt}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    <img src="{{ articles.urlToImage }}" alt="">
-    <h3>{{articles.title}}</h3>
-    <p>{{ articles.description}}</p>
     {% endfor%}
 {%endblock%}
-<p>The World Daily</p>
+
+
+
+    <!-- <img src="{{ articles.urlToImage }}" alt="">
+    <h3>{{articles.title}}</h3>
+    <p>{{ articles.description}}</p> -->
+    
