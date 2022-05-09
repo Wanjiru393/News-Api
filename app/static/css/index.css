@@ -3,11 +3,11 @@
 
 h1{
     font-family: 'Libre Bodoni', serif;
-    color: rgb(21, 122, 122);
+    color: rgb(93, 38, 169);
 }
 h3{
     font-family: 'Libre Bodoni', serif;
-    color: rgb(21, 122, 122);
+    color: rgb(93, 38, 169);
 }
 
 
@@ -28,7 +28,7 @@ h3{
     background-color: white;
     font-size: 30px;
     font-weight: bolder;
-    color: rgb(21, 122, 122);
+    color: rgb(93, 38, 169);
 }
 
 a{
@@ -51,7 +51,7 @@ h2{
 }
 
 #cardis{
-    background-color: rgb(21, 122, 122);
+    background-color: rgb(93, 38, 169);
 }
 
 span{
@@ -65,7 +65,7 @@ span{
 }
 
 .footer {
-    background-color: rgb(13, 150, 131);
+    background-color: rgb(93, 38, 169);
     color: white;
     text-align: center;
  }
