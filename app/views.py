@@ -61,8 +61,3 @@ def sports():
     return render_template('sports.html', sports=sports)
 
 
-@app.route('/science')
-def science():
-
-    sciences = get_everything('science')
-    return render_template('science.html', sciences=sciences)
